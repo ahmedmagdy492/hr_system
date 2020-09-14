@@ -9,11 +9,9 @@ namespace hr_system.Models
     public partial class DocumentType
     {
         public int Id { get; set; }
-
         public string DocTypeName { get; set; }
 
-        public int DocumentId { get; set; }
-
-        public virtual Document Document { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Document> Documents { get; set; }
     }
 }

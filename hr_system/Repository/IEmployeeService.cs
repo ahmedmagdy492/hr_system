@@ -10,6 +10,7 @@ namespace hr_system.Repository
     public interface IEmployeeService
     {
         IEnumerable<Employee> GetAll();
+        Employee GetBySSN(string ssn);
         Employee GetById(int id);
         Employee Add(Employee employee);
     }

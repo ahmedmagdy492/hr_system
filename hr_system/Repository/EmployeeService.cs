@@ -28,9 +28,14 @@ namespace hr_system.Repository
             return _context.Employees;
         }
 
+        public Employee GetBySSN(string ssn)
+        {
+            return _context.Employees.FirstOrDefault(e => e.SSN == ssn);
+        }
+
         public Employee GetById(int id)
         {
-            return _context.Employees.Find(id);
+            return _context.Employees.FirstOrDefault(e => e.Id == id);
         }
     }
 }

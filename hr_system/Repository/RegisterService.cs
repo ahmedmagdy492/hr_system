@@ -27,6 +27,7 @@ namespace hr_system.Repository
         {
             var employees = _employeeService.GetAll();
             var employee = employees.FirstOrDefault(e => e.Username == model.UserName);
+            employee = employees.FirstOrDefault(e => e.SSN == model.SSN);
             return employee == null ? true : false;
         }
 

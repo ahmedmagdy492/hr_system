@@ -54,6 +54,7 @@ namespace hr_system
             container.RegisterType<IRegisterService, RegisterService>();
             container.RegisterType<IPhoneNumberService, PhoneService>();
             container.RegisterType<IRoleService, EmployeeRoleService>();
+            container.RegisterType<IDocumentService, DocumentService>();
         }
     }
 }
