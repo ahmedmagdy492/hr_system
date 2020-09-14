@@ -32,6 +32,12 @@ namespace hr_system.Repository
             return newDocType;
         }
 
+        public void DeleteDoc(Document doc)
+        {
+            _context.Documents.Remove(doc);
+            _context.SaveChanges();
+        }
+
         public IEnumerable<Document> GetAll(int empId)
         {
             return _context.Documents.Where(d => d.EmployeeId == empId);
@@ -40,6 +46,11 @@ namespace hr_system.Repository
         public IEnumerable<DocumentType> GetAllTypes()
         {
             return _context.DocumentTypes;
+        }
+
+        public Document GetDocById(int id)
+        {
+            return _context.Documents.Find(id);
         }
     }
 }

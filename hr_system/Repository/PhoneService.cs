@@ -25,5 +25,20 @@ namespace hr_system.Repository
             _context.PhoneNumbers.Add(phone);
             _context.SaveChanges();
         }
+
+        public void DeletePhoneNumber(PhoneNumber phoneNumber)
+        {
+            _context.PhoneNumbers.Remove(phoneNumber);
+        }
+
+        public PhoneNumber GetById(int phoneNumberId)
+        {
+            return _context.PhoneNumbers.FirstOrDefault(p => p.Id == phoneNumberId);
+        }
+
+        public IEnumerable<PhoneNumber> GetPhoneNumbersOf(int empId)
+        {
+            return _context.PhoneNumbers.Where(p => p.Employee_id == empId);
+        }
     }
 }

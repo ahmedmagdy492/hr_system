@@ -13,5 +13,7 @@ namespace hr_system.Repository
         IEnumerable<Document> GetAll(int empId);
         DocumentType AddType(DocumentType docType);
         IEnumerable<DocumentType> GetAllTypes();
+        void DeleteDoc(Document doc);
+        Document GetDocById(int id);
     }
 }

@@ -13,5 +13,7 @@ namespace hr_system.Repository
         Employee GetBySSN(string ssn);
         Employee GetById(int id);
         Employee Add(Employee employee);
+        void Delete(Employee employee);
+        Employee Edit(Employee emp);
     }
 }

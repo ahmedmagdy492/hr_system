@@ -2,12 +2,7 @@
 using hr_system.Models;
 using hr_system.Repository;
 using hr_system.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 
@@ -78,6 +73,21 @@ namespace hr_system.Controllers
         public IHttpActionResult GetTypes()
         {
             return Ok(_documentService.GetAllTypes().ToList());
+        }
+
+        // DELETE /api/Document/docs
+        [Route("types")]
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            var doc = _documentService.GetDocById(id);
+            if (doc == null) return NotFound();
+
+            // TODO: delete the associated document from the server
+
+            _documentService.DeleteDoc(doc);
+
+            return Ok();
         }
     }
 }

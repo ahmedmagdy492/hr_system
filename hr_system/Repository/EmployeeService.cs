@@ -37,5 +37,17 @@ namespace hr_system.Repository
         {
             return _context.Employees.FirstOrDefault(e => e.Id == id);
         }
+
+        public void Delete(Employee employee)
+        {
+            _context.Employees.Remove(employee);
+        }
+
+        public Employee Edit(Employee emp)
+        {
+            _context.Entry(emp).State = System.Data.Entity.EntityState.Modified;
+            _context.SaveChanges();
+            return emp;
+        }
     }
 }

@@ -274,6 +274,7 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\EmployeeRoleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PhoneNumberController.cs" />
     <Compile Include="Migrations\202009131425186_initial.cs" />
     <Compile Include="Migrations\202009131425186_initial.designer.cs">
       <DependentUpon>202009131425186_initial.cs</DependentUpon>
@@ -311,6 +312,7 @@
     <Compile Include="Utility\Converter.cs" />
     <Compile Include="Utility\Utility.cs" />
     <Compile Include="ViewModels\AddDocumentViewModel.cs" />
+    <Compile Include="ViewModels\EditEmployeeViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="ViewModels\RoleRegisterationViewModel.cs" />
