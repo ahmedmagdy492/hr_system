@@ -24,8 +24,8 @@ namespace hr_system.Controllers
             this._employeeService = employeeService;
         }
 
-        // POST /api/Document/docs
-        [Route("docs")]
+        // POST /api/Document/Docs
+        [Route("Document/Docs")]
         [HttpPost]
         public IHttpActionResult AddDocument(AddDocumentViewModel model)
         {
@@ -45,8 +45,8 @@ namespace hr_system.Controllers
             return Ok();
         }
 
-        // POST /api/Document/types
-        [Route("types")]
+        // POST /api/Document/Types
+        [Route("Document/Types")]
         [HttpPost]
         public IHttpActionResult AddDocumentType([FromBody]DocumentType docType)
         {
@@ -56,8 +56,8 @@ namespace hr_system.Controllers
             return Ok();
         }
 
-        // GET /api/Document/docs
-        [Route("docs")]
+        // GET /api/Document/Docs
+        [Route("Document/Docs")]
         [HttpGet]
         public IHttpActionResult GetDocs([FromUri]int empId)
         {
@@ -67,16 +67,16 @@ namespace hr_system.Controllers
             return Ok(_documentService.GetAll(empId));
         }
 
-        // GET /api/Document/types
-        [Route("types")]
+        // GET /api/Document/Types
+        [Route("Document/Types")]
         [HttpGet]
         public IHttpActionResult GetTypes()
         {
             return Ok(_documentService.GetAllTypes().ToList());
         }
 
-        // DELETE /api/Document/docs
-        [Route("types")]
+        // DELETE /api/Document/Docs
+        [Route("Document/Docs")]
         [HttpDelete]
         public IHttpActionResult Delete(int id)
         {
