@@ -11,7 +11,7 @@ using System.Web.Http;
 
 namespace hr_system.Controllers
 {
-    [OAuthAuthorize]
+    //[OAuthAuthorize]
     [RoutePrefix("api")]
     public class EmployeeRoleController : ApiController
     {

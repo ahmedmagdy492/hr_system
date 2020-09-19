@@ -27,6 +27,7 @@ namespace hr_system.Repository
             if(!IsExist(role.RoleName))
             {
                 var createdRole = _context.EmployeeRoles.Add(role);
+                _context.SaveChanges();
                 return createdRole;
             }
             return null;
